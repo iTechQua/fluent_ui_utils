@@ -319,7 +319,7 @@ packages:
       path: ".."
       relative: true
     source: path
-    version: "0.0.1"
+    version: "1.0.1"
   flutter:
     dependency: "direct main"
     description: flutter
@@ -1081,7 +1081,7 @@ packages:
     source: hosted
     version: "27.2.4"
   syncfusion_flutter_datagrid:
-    dependency: transitive
+    dependency: "direct main"
     description:
       name: syncfusion_flutter_datagrid
       sha256: "028b18700fb0f11dc9bfc29f56f5586112728443c8d3f251a050212b0e4bf3cd"
