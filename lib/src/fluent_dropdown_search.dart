@@ -1,5 +1,5 @@
 import 'package:fluent_ui/fluent_ui.dart';
-import 'package:flutter/material.dart' as material;
+import 'package:flutter/material.dart' show InputDecoration, OutlineInputBorder;
 import 'package:itq_utils/itq_utils.dart';
 
 class FluentDropdownSearch<T> extends StatelessWidget {
@@ -46,8 +46,7 @@ class FluentDropdownSearch<T> extends StatelessWidget {
     final backgroundColor = isDarkMode ? const Color(0xFF2D2D2D) : Colors.white;
     final borderColor = isDarkMode ? Colors.grey[130] : Colors.grey[100];
 
-    return material.Material(
-      child: Column(
+    return Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         mainAxisSize: MainAxisSize.min,
         children: [
@@ -71,7 +70,7 @@ class FluentDropdownSearch<T> extends StatelessWidget {
                 fontSize: 12,
                 color: textColor,
               ),
-              dropdownSearchDecoration: material.InputDecoration(
+              dropdownSearchDecoration: InputDecoration(
                 labelStyle: TextStyle(
                   fontSize: 12,
                   color: textColor.withOpacity(0.8),
@@ -84,17 +83,17 @@ class FluentDropdownSearch<T> extends StatelessWidget {
                 ),
                 filled: true,
                 fillColor: backgroundColor,
-                border: material.OutlineInputBorder(
+                border: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(8),
-                  borderSide: material.BorderSide(color: borderColor),
+                  borderSide: BorderSide(color: borderColor),
                 ),
-                enabledBorder: material.OutlineInputBorder(
+                enabledBorder: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(8),
-                  borderSide: material.BorderSide(color: borderColor),
+                  borderSide: BorderSide(color: borderColor),
                 ),
-                focusedBorder: material.OutlineInputBorder(
+                focusedBorder: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(8),
-                  borderSide: material.BorderSide(color: borderColor),
+                  borderSide: BorderSide(color: borderColor),
                 ),
                 suffixIconConstraints: const BoxConstraints(maxHeight: 40),
               ),
@@ -121,7 +120,7 @@ class FluentDropdownSearch<T> extends StatelessWidget {
                   fontSize: 14,
                   color: textColor,
                 ),
-                decoration: material.InputDecoration(
+                decoration: InputDecoration(
                   isDense: true,
                   fillColor: backgroundColor,
                   focusColor: borderColor,
@@ -130,9 +129,9 @@ class FluentDropdownSearch<T> extends StatelessWidget {
                     vertical: 6,
                     horizontal: 16,
                   ),
-                  border: material.OutlineInputBorder(
+                  border: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(8),
-                    borderSide: material.BorderSide(color: borderColor),
+                    borderSide: BorderSide(color: borderColor),
                   ),
                 ),
               ),
@@ -170,7 +169,6 @@ class FluentDropdownSearch<T> extends StatelessWidget {
             }),
           ),
         ],
-      ),
-    );
+      );
   }
 }

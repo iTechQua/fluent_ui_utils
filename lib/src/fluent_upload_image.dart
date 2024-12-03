@@ -3,7 +3,7 @@ import 'package:clay_containers/clay_containers.dart';
 import 'package:file_picker/file_picker.dart';
 import 'package:fluent_ui/fluent_ui.dart';
 import 'package:flutter/foundation.dart';
-import 'package:flutter/material.dart' as m;
+import 'package:flutter/material.dart' show AlertDialog;
 
 class FluentUploadImage extends StatefulWidget {
   const FluentUploadImage({
@@ -130,9 +130,9 @@ class _FluentUploadImageState extends State<FluentUploadImage> {
                     color: Colors.blue.light,
                     shape: BoxShape.circle,
                   ),
-                  child: m.IconButton(
+                  child: IconButton(
                     icon: const Icon(
-                      m.Icons.more_vert,
+                      FluentIcons.more_vertical,
                       color: Colors.white,
                     ),
                     onPressed: () async {
@@ -141,16 +141,16 @@ class _FluentUploadImageState extends State<FluentUploadImage> {
                         context: context,
                         barrierDismissible: true,
                         builder: (BuildContext context) {
-                          return m.AlertDialog(
+                          return AlertDialog(
                             title:
                             const Text('What would you like to do?'),
                             content: Column(
                               mainAxisSize: MainAxisSize.min,
                               children: [
-                                m.ListTile(
-                                  leading: const Icon(m.Icons.delete),
+                                ListTile(
+                                  leading: const Icon(FluentIcons.delete),
                                   title: const Text('Delete Image'),
-                                  onTap: () {
+                                  onPressed: () {
                                     // Delete the file
                                     setState(() {
                                       webFiles.clear();
@@ -158,10 +158,10 @@ class _FluentUploadImageState extends State<FluentUploadImage> {
                                     Navigator.pop(context);
                                   },
                                 ),
-                                m.ListTile(
-                                  leading: const Icon(m.Icons.refresh),
+                                ListTile(
+                                  leading: const Icon(FluentIcons.refresh),
                                   title: const Text('Replace Image'),
-                                  onTap: () async {
+                                  onPressed: () async {
                                     // Replace the file with a new one (pick image from file picker)
                                     final newFile =
                                     await pickWebImageFiles(); // Use your file picker logic here
@@ -200,9 +200,9 @@ class _FluentUploadImageState extends State<FluentUploadImage> {
                     color: Colors.blue.light,
                     shape: BoxShape.circle,
                   ),
-                  child: m.IconButton(
+                  child: IconButton(
                     icon: const Icon(
-                      m.Icons.more_vert,
+                      FluentIcons.more_vertical,
                       color: Colors.white,
                     ),
                     onPressed: () async {
@@ -211,16 +211,16 @@ class _FluentUploadImageState extends State<FluentUploadImage> {
                         context: context,
                         barrierDismissible: true,
                         builder: (BuildContext context) {
-                          return m.AlertDialog(
+                          return AlertDialog(
                             title: const Text(
                                 'What would you like to do?'),
                             content: Column(
                               mainAxisSize: MainAxisSize.min,
                               children: [
-                                m.ListTile(
-                                  leading: const Icon(m.Icons.delete),
+                                ListTile(
+                                  leading: const Icon(FluentIcons.delete),
                                   title: const Text('Delete Image'),
-                                  onTap: () {
+                                  onPressed: () {
                                     // Delete the file
                                     setState(() {
                                       files.clear();
@@ -228,11 +228,11 @@ class _FluentUploadImageState extends State<FluentUploadImage> {
                                     Navigator.pop(context);
                                   },
                                 ),
-                                m.ListTile(
+                                ListTile(
                                   leading:
-                                  const Icon(m.Icons.refresh),
+                                  const Icon(FluentIcons.refresh),
                                   title: const Text('Replace Image'),
-                                  onTap: () async {
+                                  onPressed: () async {
                                     // Replace the file with a new one (pick image from file picker)
                                     final newFile =
                                     await pickImageFiles(); // Use your file picker logic here
